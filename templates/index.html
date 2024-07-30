@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
     <style>
+		.gallery.style2 article {
+			padding: 20px;
+		}
         .video-container {
             max-width: 800px;
             margin: 0 auto;
@@ -78,7 +81,7 @@
 				<!-- FIRST -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Happy Birthday Conrad!</h2>
+							<h2>Happy Birthday,! Dad!</h2>
 							<p>This page is a fun dedication to you from your wife and kids. It is meant as a celerbration of the positive impact you've had on our lives! A chance to laugh, look back, and maybe a light friendly roast or two. We love you and are forever grateful you are in our lives!</p>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -179,31 +182,21 @@
 
 				</section>
 
-
+				{% for video in videos %}
+				{% set class = "right" if loop.index is even else "left" %}
+				{% set class_alt = "left" if loop.index is even else "right" %}
 				<!-- Video -->
-				<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+				<section class="banner style1 orient-{{class}} content-align-{{class}} image-position-{{class_alt}} fullscreen onload-image-fade-in onload-content-fade-{{class_alt}}">
 					<div class="content">
-						<h1>When I Was About Dylan's Age (Part 1)</h1>
-						<p class="major">This was a fun memory in Calgary where Papa remembed something he won as a kid.</p>
+						<h1>{{video.title}}</h1>
+						<p class="major">{{video.description}}</p>
 					</div>
 					<div class="image video-container">
-						<img src="/static/screenshots/dylans_age_1_screenshot.png" alt="When I Was Dylan's Age #1" />
-						<!-- <div class="play-button" data-video-src="vids/dylans_age_1.avi">▶</div> -->
-						<a href="/video/dylans_age_1"><div class="play-icon"></div></a>
+						<img src="/static/screenshots/{{video.source}}_screenshot.png" alt="" />
+						<a href="/video/{{video.source}}"><div class="play-icon"></div></a>
 					</div>
 				</section>
-				<!-- Video -->
-				<section class="banner style1 orient-right content-align-right image-position-left fullscreen onload-image-fade-in onload-content-fade-left">
-					<div class="content">
-						<h1>When I Was About Dylan's Age (Part 2)</h1>
-						<p class="major">Another funny time, but this one is about dessert!</p>
-					</div>
-					<div class="image video-container">
-						<img src="/static/screenshots/dylans_age_2_screenshot.png" alt="When I Was Dylan's Age #2" />
-						<!-- <div class="play-button" data-video-src="vids/dylans_age_1.avi">▶</div> -->
-						<a href="/video/dylans_age_2"><div class="play-icon"></div></a>
-					</div>
-				</section>
+				{% endfor %}
 
 <!--
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
