@@ -78,111 +78,59 @@
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
+				{% for pic in pics %}
+				{% set class = "right" if loop.index is even else "left" %}
+				{% set class_alt = "left" if loop.index is even else "right" %}
+                {% set class_type = "spotlight onload-content-fade-right fullscreen" if loop.index == 1 else "banner" %}
 				<!-- FIRST -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Happy Birthday,! Dad!</h2>
-							<p>This page is a fun dedication to you from your wife and kids. It is meant as a celerbration of the positive impact you've had on our lives! A chance to laugh, look back, and maybe a light friendly roast or two. We love you and are forever grateful you are in our lives!</p>
-							<!-- <ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul> -->
-						</div>
-						<div class="image">
-							<img src="/static/pics/1.jpg" alt="" />
-						</div>
+                <section class="{{class_type}} style1 orient-{{class}} content-align-{{class_alt}} image-position-center onscroll-image-fade-in" id="first">
+                    <div class="content">
+                        <h2>{{pic.title}}</h2>
+                        <p>{{pic.description}}</p>
+                        {% if pic.link_text %}
+                        <ul class="actions stacked">
+                            <li><a href="{{pic.link_source}}" class="button big wide smooth-scroll-middle">{{pic.link_text}}</a></li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div class="image">
+                        <img src="/static/pics/{{pic.source}}" alt="" />
+                    </div>
 					</section>
+                    {% endfor %}
 
-				<!-- 72 Years Ago -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>72 Years Ago...</h1>
-							<p class="major">Planet Earth was 1-degree further away from it's current position in a never-ending <a href="https://en.wikipedia.org/wiki/Axial_precession">axial precession</a>. 
-								Every 25,772 years the earth's gravitation "top" rotates in a full circle. That means a single degree rotation takes (just about) 72 years. Congrats on making it 1 degree in Earth's axial precession! It is a constant reminder of how a small change can magnify to astronomical impact.</p>
-							<ul class="actions stacked">
-								<li><a href="https://en.wikipedia.org/wiki/Axial_precession" class="button big wide smooth-scroll-middle">Learn More, Nerds</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="/static/images/axial_precession_4sec_loop.gif" alt="" />
-						</div>
-					</section>
-
-				<!-- Joy -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>You Always Have Joy</h2>
-							<p>No, not just your lovely wife and our Mom! We love that you are (often) happy and cheerful. You bring life to the party and we love it!</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">More Joy</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="/static/pics/70_bday.jpg" alt="" />
-						</div>
-					</section>
-
+                {% if gallery %}
 				<!-- Kids -->
 				<section class="wrapper style1 align-center">
 					<div class="inner">
-						<h2>An Example to Your Kids</h2>
-						<p>You are an amazing example of being a DAD, a GRANDFATHER, and a PARENT. Thanks for being there. Your presence with us, advocacy for us, commitment to us, and directing us towards a great purpose has shaped each of us. Here are a few things you taught us:</p>
+                        <h2>{{gallery.title}}</h2>
+                        <p>{{gallery.description}}</p>
 					</div>
 
 					<!-- Gallery -->
+                    {% if gallery.pics %}
 						<div class="gallery style2 medium lightbox onscroll-fade-in">
+                            {% for item in gallery.pics %}
 							<article>
-								<a href="/static/pics/bttf.jpg" class="image">
-									<img src="/static/pics/bttf.jpg" alt="" />
+                                <a href="/static/pics/{{item.source}}" class="image">
+                                    <img src="/static/pics/{{item.source}}" alt="" />
 								</a>
 								<div class="caption">
-									<h3>Remember the Past</h3>
-									<p>The ability to remember what happened before is like going back in time. (Or something, something...whatever fits a picture of us with a Delorean! This is just cool). Oh you also taught us to love cars.</p>
+                                    <h3>{{ item.title }}</h3>
+                                    <p>{{ item.description }}</p>
 									<ul class="actions fixed">
-										<li><span class="button small">1.21 Gigawatts</span></li>
+                                        <li><span class="button small">{{ item.link }}</span></li>
 									</ul>
 								</div>
 							</article>
-							<article>
-								<a href="/static/pics/nasa.jpg" class="image">
-									<img src="/static/pics/nasa.jpg" alt="" />
-								</a>
-								<div class="caption">
-									<h3>Always be Adventuring!</h3>
-									<p>Each of us has our own unique sense of adventure, but it's something we learned to love.</p>
-									<ul class="actions fixed">
-										<li><span class="button small">To Infinity!</span></li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<a href="/static/pics/fancy.jpg" class="image">
-									<img src="/static/pics/fancy.jpg" alt="" />
-								</a>
-								<div class="caption">
-									<h3>Fancy AF</h3>
-									<p>You always love to be fancy. You know it, we know it, and we love you for it. (Ok, we like being fancy too)</p>
-									<ul class="actions fixed">
-										<li><span class="button small">Bling, Baby</span></li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<a href="/static/pics/have_fun.jpg" class="image">
-									<img src="/static/pics/have_fun.jpg" alt="" />
-								</a>
-								<div class="caption">
-									<h3>Have Fun</h3>
-									<p>It's always OK to have fun and mess around.</p>
-									<ul class="actions fixed">
-										<li><span class="button small">Take Em to Jail, Boys.</span></li>
-									</ul>
-								</div>
-							</article>
+                            {% endfor %}
 						</div>
+                    {% endif %}
 
 				</section>
+                {% endif %}
 
-				{% for video in videos %}
+				{% for video in vids %}
 				{% set class = "right" if loop.index is even else "left" %}
 				{% set class_alt = "left" if loop.index is even else "right" %}
 				<!-- Video -->

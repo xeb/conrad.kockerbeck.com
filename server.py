@@ -9,18 +9,18 @@ app = Flask(__name__)
 app.template_folder = 'templates'
 app.static_folder = 'static'
 
-def get_vids_data():
+def get_data():
     # Get the directory of the current script
     current_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Construct the path to the data.yaml file
-    yaml_path = os.path.join(current_dir, 'static', 'vids', 'data.yaml')
+    yaml_path = os.path.join(current_dir, 'data.yaml')
     
     # Read and parse the YAML file
     try:
         with open(yaml_path, 'r') as file:
             data = yaml.safe_load(file)
-        return data["videos"]
+        return data
     except FileNotFoundError:
         print(f"Error: The file {yaml_path} was not found.")
         return None
@@ -30,7 +30,11 @@ def get_vids_data():
 
 @app.route('/')
 def index():
-    return render_template('index.html', videos=get_vids_data())
+    data = get_data()
+    #gallery = data.get('gallery', [])
+    #gallery["items"] = list(gallery["items"])
+    gallery = data.get('gallery', [])
+    return render_template('index.html', vids=data["vids"], pics=data["pics"], gallery=gallery)
 
 @app.route('/video/<name>')
 def serve_video(name):

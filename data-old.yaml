@@ -1,0 +1,37 @@
+pics:
+  - title: "Happy Birthday, Dad!"
+    description: "This page is a fun dedication to you from your wife and kids. It is meant as a celerbration of the positive impact you've had on our lives! A chance to laugh, look back, and maybe a light friendly roast or two. We love you and are forever grateful you are in our lives!"
+    source: "1.jpg"
+
+  - title: "72 Years Ago..."
+    description: "Planet Earth was 1-degree further away from it's current position in a never-ending axial precession. Every 25,772 years the earth's gravitation \"top\" rotates in a full circle. That means a single degree rotation takes (just about) 72 years. Congrats on making it 1 degree in Earth's axial precession! It is a constant reminder of how a small change can magnify to astronomical impact."
+    link_text: "Learn More, Nerds"
+    link_href: "https://en.wikipedia.org/wiki/Axial_precession"
+    source: "axial_precession_4sec_loop.gif"
+
+  - title: "You Always Have Joy"
+    description: "No, not just your lovely wife and our Mom! We love that you are (often) happy and cheerful. You bring life to the party and we love it!No, not just your lovely wife and our Mom! We love that you are (often) happy and cheerful. You bring life to the party and we love it!"
+    source: "70_bday.jpg"
+
+vids:
+  - title: "When I Was About Dylan's Age (Part 1)"
+    description: "This was a fun memory in Calgary where Papa remembed something he won as a kid."
+    source: "dylans_age_1"
+
+  - title: "When I Was About Dylan's Age (Part 2)"
+    description: "Another funny time, but this one is about dessert!"
+    source: "dylans_age_2"
+
+  - title: "Don't Say It!"
+    description: "Even at a family gathering, you were more worried about letting slipping your latest brilliant idea MORE than you cared about your green hand."
+    source: "dont_say_it"
+
+  - title: "You Love a Silly Toy"
+    description: "You always love showing off a new toy to your grandkids. Your joy is apparent!"
+    source: "elmo_xmas"
+
+  - title: "Games"
+    description: "You would always teach us and your grandkids how gamble ought to be done. Maximize those tickets!"
+    source: "games"
+
+

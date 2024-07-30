@@ -14,4 +14,7 @@ site:  ## Builds the site and serves it locally
 clean: ## cleans up the cruft from macFUSE
 	echo "Cleaning up"
 	find . -name "._*" -delete
-	rm .DS_Store
+	rm .DS_Storemak
+
+upload: ## Uploads the static assets
+	./upload.sh
