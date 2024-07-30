@@ -8,8 +8,9 @@ help:
 setup: ## Sets up the project from a fresh clone
 	pip install -r requirements.txt
 
-build: ## Creates the site
-	python3 main.py
+site:  ## Builds the site and serves it locally
+	python3 server.py
 
-site: build ## Builds the site and serves it locally
-	python3 -m http.server 8007
+clean:
+	echo "Cleaning up"
+	find . -name "._*" -delete

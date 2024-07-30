@@ -162,6 +162,8 @@ cython_debug/
 #.idea/
 
 
-
 vids/
 pics/
+static/vids/
+static/pics/
+static/screenshots/

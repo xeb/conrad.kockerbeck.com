@@ -75,31 +75,6 @@
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
-
-				<!-- Video -->
-				<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-					<div class="content">
-						<h1>When I Was About Dylan's Age (Part 1)</h1>
-						<p class="major">This was a fun memory in Calgary where Papa remembed something he won as a kid.</p>
-					</div>
-					<div class="image video-container">
-						<img src="/static/screenshots/dylans_age_1_screenshot.png" alt="When I Was Dylan's Age #1" alt="Video Thumbnail" />
-						<!-- <div class="play-button" data-video-src="vids/dylans_age_1.avi">▶</div> -->
-						<a href="vids/dylans_age_1.avi"><div class="play-icon" data-video-src="vids/dylans_age_1.avi"></div></a>
-					</div>
-
-					<!-- Modal -->
-					<!--div id="videoModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
-						<div class="modal-content" style="margin: 10% auto; padding: 20px; width: 80%;">
-						<span class="close" style="color: #f1f1f1; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
-						<video id="modalVideo" width="100%" controls>
-							<source src="vids/dylans_age_1.avi" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						</div>
-					</div-->
-				</section>
-
 				<!-- FIRST -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -110,7 +85,7 @@
 							</ul> -->
 						</div>
 						<div class="image">
-							<img src="pics/1.jpg" alt="" />
+							<img src="/static/pics/1.jpg" alt="" />
 						</div>
 					</section>
 
@@ -125,7 +100,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/axial_precession_4sec_loop.gif" alt="" />
+							<img src="/static/images/axial_precession_4sec_loop.gif" alt="" />
 						</div>
 					</section>
 
@@ -139,7 +114,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="pics/70_bday.jpg" alt="" />
+							<img src="/static/pics/70_bday.jpg" alt="" />
 						</div>
 					</section>
 
@@ -153,8 +128,8 @@
 					<!-- Gallery -->
 						<div class="gallery style2 medium lightbox onscroll-fade-in">
 							<article>
-								<a href="pics/bttf.jpg" class="image">
-									<img src="pics/bttf.jpg" alt="" />
+								<a href="/static/pics/bttf.jpg" class="image">
+									<img src="/static/pics/bttf.jpg" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Remember the Past</h3>
@@ -165,8 +140,8 @@
 								</div>
 							</article>
 							<article>
-								<a href="pics/nasa.jpg" class="image">
-									<img src="pics/nasa.jpg" alt="" />
+								<a href="/static/pics/nasa.jpg" class="image">
+									<img src="/static/pics/nasa.jpg" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Always be Adventuring!</h3>
@@ -177,8 +152,8 @@
 								</div>
 							</article>
 							<article>
-								<a href="pics/fancy.jpg" class="image">
-									<img src="pics/fancy.jpg" alt="" />
+								<a href="/static/pics/fancy.jpg" class="image">
+									<img src="/static/pics/fancy.jpg" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Fancy AF</h3>
@@ -189,8 +164,8 @@
 								</div>
 							</article>
 							<article>
-								<a href="pics/have_fun.jpg" class="image">
-									<img src="pics/have_fun.jpg" alt="" />
+								<a href="/static/pics/have_fun.jpg" class="image">
+									<img src="/static/pics/have_fun.jpg" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Have Fun</h3>
@@ -205,6 +180,30 @@
 				</section>
 
 
+				<!-- Video -->
+				<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<div class="content">
+						<h1>When I Was About Dylan's Age (Part 1)</h1>
+						<p class="major">This was a fun memory in Calgary where Papa remembed something he won as a kid.</p>
+					</div>
+					<div class="image video-container">
+						<img src="/static/screenshots/dylans_age_1_screenshot.png" alt="When I Was Dylan's Age #1" />
+						<!-- <div class="play-button" data-video-src="vids/dylans_age_1.avi">▶</div> -->
+						<a href="/video/dylans_age_1"><div class="play-icon"></div></a>
+					</div>
+				</section>
+				<!-- Video -->
+				<section class="banner style1 orient-right content-align-right image-position-left fullscreen onload-image-fade-in onload-content-fade-left">
+					<div class="content">
+						<h1>When I Was About Dylan's Age (Part 2)</h1>
+						<p class="major">Another funny time, but this one is about dessert!</p>
+					</div>
+					<div class="image video-container">
+						<img src="/static/screenshots/dylans_age_2_screenshot.png" alt="When I Was Dylan's Age #2" />
+						<!-- <div class="play-button" data-video-src="vids/dylans_age_1.avi">▶</div> -->
+						<a href="/video/dylans_age_2"><div class="play-icon"></div></a>
+					</div>
+				</section>
 
 <!--
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
@@ -318,13 +317,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
 
 
 			<script>
