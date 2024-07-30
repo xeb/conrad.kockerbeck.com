@@ -11,6 +11,6 @@ setup: ## Sets up the project from a fresh clone
 site:  ## Builds the site and serves it locally
 	python3 server.py
 
-clean:
+clean: ## cleans up the cruft from macFUSE
 	echo "Cleaning up"
 	find . -name "._*" -delete
