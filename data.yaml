@@ -14,8 +14,25 @@ pics:
     source: "70_bday.jpg"
 
   - title: "You Were There When I Needed You Most"
-    description: "Ok, this is from Mark, but you were there when I began my journey into fatherhood. I was exhausted but your joy and happiness gave me energy!"
+    description: "[From Mark] You were there when I began my journey into fatherhood. I was exhausted but your joy and happiness gave me energy!"
     source: "exhausted.jpg"
+    
+  - title: "With Da Babies"
+    description: "[From Spencer] I just love watching you with my boys, theres no denying the bond you share with them and all of your grandchildren."
+    source: "from_spencer/baby2.jpg"
+  - title: "Cheers"
+    source: "from_spencer/beers.jpg"
+    description: "[From Spencer] Your adventurous spirit has definitely rubbed off on us all, I credit so much of my desire for exploring to the way you raised us to be curious and excited."
+  - title: "Family"
+    source: "from_spencer/family.jpg"
+    description: "[From Spencer] Just look at that smile :)  Its great to see how proud you were of your first born and growing family."
+  - title: "Working"
+    source: "from_spencer/office.jpg"
+    description: "[From Spencer] Working with you at Gunthers has been amazing. I’m very grateful for the opportunity to learn the family business from you and help continue our success with the 3rd Generation of Kockerbecks running Gunthers Building Center. I really look forward to our after-work wrap calls and getting to be involved in each others day-to-day activities."
+  - title: "Family Five"
+    source: "from_spencer/ppl.jpg"
+    description: "[From Spencer] You’ve always made time for us and we're all so appreciative of your dedication to your family and your excitement for sharing the world with us and your grandchildren."
+
 
 vids:
   - title: "When I Was About Dylan's Age (Part 1)"
@@ -64,11 +81,20 @@ galleries:
     description: "Thank you Marko for putting this together, we wanted to show a few pictures and videos that will be available on this site forever. I feel so very lucky to be a part of this family and to have you as my father. I truly feel like I had the best childhood ever and we’re all doing a great job ensuring the next generation of Kockerbecks get the same great experiences in life. Thank you for everything, we’re all so lucky. Happy Birthday to my amazing Dad."
     pics:
       - title: "With Da Babies"
-        description: "I just love watching you with my boys, theres no denying the bond you share with them and all of your grandchildren."
+        description: "[From Spencer] I just love watching you with my boys, theres no denying the bond you share with them and all of your grandchildren."
         source: "from_spencer/baby2.jpg"
       - title: "Cheers"
         source: "from_spencer/beers.jpg"
-        description: "Your adventurous spirit has definitely rubbed off on us all, I credit so much of my desire for exploring to the way you raised us to be curious and excited."
+        description: "[From Spencer] Your adventurous spirit has definitely rubbed off on us all, I credit so much of my desire for exploring to the way you raised us to be curious and excited."
+      - title: "Family"
+        source: "from_spencer/family.jpg"
+        description: "[From Spencer] Just look at that smile :)  Its great to see how proud you were of your first born and growing family."
+      - title: "Working"
+        source: "from_spencer/office.jpg"
+        description: "[From Spencer] Working with you at Gunthers has been amazing. I’m very grateful for the opportunity to learn the family business from you and help continue our success with the 3rd Generation of Kockerbecks running Gunthers Building Center. I really look forward to our after-work wrap calls and getting to be involved in each others day-to-day activities."
+      - title: "Family Five"
+        source: "from_spencer/ppl.jpg"
+        description: "[From Spencer] You’ve always made time for us and we're all so appreciative of your dedication to your family and your excitement for sharing the world with us and your grandchildren."
 
   from_mom:
     title: "From Your Loving Wife"
