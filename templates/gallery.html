@@ -1,0 +1,33 @@
+
+                {% if gallery %}
+				<!-- Kids -->
+				<section class="wrapper style1 align-center">
+					<div class="inner">
+                        <h2>{{gallery.title}}</h2>
+                        <p>{{gallery.description}}</p>
+					</div>
+
+					<!-- Gallery -->
+                    {% if gallery.pics %}
+						<div class="gallery style2 medium lightbox onscroll-fade-in">
+                            {% for item in gallery.pics %}
+							<article>
+                                <a href="/static/pics/{{item.source}}" class="image">
+                                    <img src="/static/pics/{{item.source}}" alt="" />
+								</a>
+								<div class="caption">
+                                    <h3>{{ item.title }}</h3>
+                                    <p>{{ item.description }}</p>
+                                    {% if item.link %}
+									<ul class="actions fixed">
+                                        <li><span class="button small">{{ item.link }}</span></li>
+									</ul>
+                                    {% endif %}
+								</div>
+							</article>
+                            {% endfor %}
+						</div>
+                    {% endif %}
+
+				</section>
+                {% endif %}

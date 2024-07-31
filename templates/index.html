@@ -81,9 +81,9 @@
 				{% for pic in pics %}
 				{% set class = "right" if loop.index is even else "left" %}
 				{% set class_alt = "left" if loop.index is even else "right" %}
-                {% set class_type = "spotlight onload-content-fade-right fullscreen" if loop.index == 1 else "banner" %}
+                {% set class_type = "spotlight" if loop.index == 1 else "banner" %}
 				<!-- FIRST -->
-                <section class="{{class_type}} style1 orient-{{class}} content-align-{{class_alt}} image-position-center onscroll-image-fade-in" id="first">
+                <section class="{{class_type}} style1 orient-{{class}} content-align-{{class_alt}} image-position-center" id="first">
                     <div class="content">
                         <h2>{{pic.title}}</h2>
                         <p>{{pic.description}}</p>
@@ -99,36 +99,14 @@
 					</section>
                     {% endfor %}
 
-                {% if gallery %}
-				<!-- Kids -->
-				<section class="wrapper style1 align-center">
-					<div class="inner">
-                        <h2>{{gallery.title}}</h2>
-                        <p>{{gallery.description}}</p>
-					</div>
+                {% with gallery=gallery %}
+                {% include 'gallery.html' %}
+                {% endwith %}
 
-					<!-- Gallery -->
-                    {% if gallery.pics %}
-						<div class="gallery style2 medium lightbox onscroll-fade-in">
-                            {% for item in gallery.pics %}
-							<article>
-                                <a href="/static/pics/{{item.source}}" class="image">
-                                    <img src="/static/pics/{{item.source}}" alt="" />
-								</a>
-								<div class="caption">
-                                    <h3>{{ item.title }}</h3>
-                                    <p>{{ item.description }}</p>
-									<ul class="actions fixed">
-                                        <li><span class="button small">{{ item.link }}</span></li>
-									</ul>
-								</div>
-							</article>
-                            {% endfor %}
-						</div>
-                    {% endif %}
 
-				</section>
-                {% endif %}
+                {% with gallery=from_mom %}
+                {% include 'gallery.html' %}
+                {% endwith %}
 
 				{% for video in vids %}
 				{% set class = "right" if loop.index is even else "left" %}

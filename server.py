@@ -28,13 +28,21 @@ def get_data():
         print(f"Error parsing YAML file: {e}")
         return None
 
+def get_dynamic_data(pic_path):
+    # Get all files in the pic_path in a list
+    files = os.listdir(os.path.join("static", "pics", pic_path))
+    return [{ 'title': file.split('.')[0], 'source': f'{pic_path}/{file}' } for file in files]
+
 @app.route('/')
 def index():
     data = get_data()
-    #gallery = data.get('gallery', [])
-    #gallery["items"] = list(gallery["items"])
     gallery = data.get('gallery', [])
-    return render_template('index.html', vids=data["vids"], pics=data["pics"], gallery=gallery)
+    from_mom = {
+            "title": "Pics from Mom!",
+            "description": "Here are some pictures that Mom sent me!",
+            "pics": get_dynamic_data('from_mom')
+    }
+    return render_template('index.html', vids=data["vids"], pics=data["pics"], gallery=gallery, from_mom=from_mom)
 
 @app.route('/video/<name>')
 def serve_video(name):
