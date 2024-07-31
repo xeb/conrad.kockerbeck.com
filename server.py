@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory, request
 import os
-import yaml
+import yaml 
 
 app = Flask(__name__)
 
@@ -36,16 +36,28 @@ def get_dynamic_data(pic_path):
 @app.route('/')
 def index():
     data = get_data()
-    gallery = data.get('gallery', [])
-    from_mom = {
-            "title": "Pics from Mom!",
-            "description": "Here are some pictures that Mom sent me!",
-            "pics": get_dynamic_data('from_mom')
-    }
-    return render_template('index.html', vids=data["vids"], pics=data["pics"], gallery=gallery, from_mom=from_mom)
+    galleries = data.get('galleries', [])
+    for key in galleries.keys():
+        pic_defs = galleries[key].get('pics', False)
+        pic_dyno = get_dynamic_data(key)
+
+        # If there are no overrides, use the dynamic discovered pics
+        if not pic_defs and pic_dyno:
+            galleries[key]['pics'] =  pic_dyno# we could have a path, but key is fine for this hack
+        
+        # If we do have some overrides, we need to merge them
+        if pic_defs and pic_dyno:
+            for item in pic_dyno:
+                for defi in pic_defs:
+                    if item['source'] == defi['source']:
+                        item.update(defi)
+                        
+            galleries[key]['pics'] = pic_dyno
+
+    return render_template('index.html', vids=data["vids"], pics=data["pics"], galleries=galleries)
 
 @app.route('/video/<name>')
-def serve_video(name):
+def serve_video(name):   
     # Construct the video URL
     video_src = f"/static/vids/{name}.avi"
     return render_template('player.html', video_src=video_src)

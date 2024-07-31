@@ -99,14 +99,11 @@
 					</section>
                     {% endfor %}
 
-                {% with gallery=gallery %}
+				{% for gallery in galleries.keys() %}
+                {% with gallery=galleries[gallery] %}
                 {% include 'gallery.html' %}
                 {% endwith %}
-
-
-                {% with gallery=from_mom %}
-                {% include 'gallery.html' %}
-                {% endwith %}
+				{% endfor %}
 
 				{% for video in vids %}
 				{% set class = "right" if loop.index is even else "left" %}

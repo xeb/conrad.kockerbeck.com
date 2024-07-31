@@ -13,6 +13,10 @@ pics:
     description: "No, not just your lovely wife and our Mom! We love that you are (often) happy and cheerful. You bring life to the party and we love it!No, not just your lovely wife and our Mom! We love that you are (often) happy and cheerful. You bring life to the party and we love it!"
     source: "70_bday.jpg"
 
+  - title: "You Were There When I Needed You Most"
+    description: "Ok, this is from Mark, but you were there when I began my journey into fatherhood. I was exhausted but your joy and happiness gave me energy!"
+    source: "exhausted.jpg"
+
 vids:
   - title: "When I Was About Dylan's Age (Part 1)"
     description: "This was a fun memory in Calgary where Papa remembed something he won as a kid."
@@ -34,23 +38,55 @@ vids:
     description: "You would always teach us and your grandkids how gamble ought to be done. Maximize those tickets!"
     source: "games"
 
-gallery:
-  title: "An Example to Your Kids"
-  description: "You are an amazing example of being a DAD, a GRANDFATHER, and a PARENT. Thanks for being there. Your presence with us, advocacy for us, commitment to us, and directing us towards a great purpose has shaped each of us. Here are a few things you taught us:"
-  pics:
-    - title: "Remember the Past"
-      description: "The ability to remember what happened before is like going back in time. (Or something, something...whatever fits a picture of us with a Delorean! This is just cool). Oh you also taught us to love cars. The ability to remember what happened before is like going back in time. (Or something, something...whatever fits a picture of us with a Delorean! This is just cool). Oh you also taught us to love cars."
-      source: "bttf.jpg"
-      link: "1.21 Gigawatts"
-    - title: "Always be Adventuring!"
-      description: "Each of us has our own unique sense of adventure, but it's something we learned to love."
-      link: "To Infinity!"
-      source: "nasa.jpg"
-    - title: "Fancy AF"
-      description: "You always love to be fancy. You know it, we know it, and we love you for it. (Ok, we like being fancy too)"
-      link: "Bling, Baby, Bling"
-      source: "fancy.jpg"
-    - title: "Have Fun"
-      description: "There is always an occasion to mess around and have fun!"
-      link: "Take 'em to Jail, Boys"
-      source: "have_fun.jpg"
+  - title: "Teaching Guitar"
+    description: "Your love of music definitely rubs off on the kids!"
+    source: "guitar"
+
+  - title: "Gadgets"
+    description: "I love that you are always into tech and gadgets :)"
+    source: "vr"
+
+  - title: "Wall"
+    description: "Not sure"
+    source: "wall"
+
+  - title: "Christmas Time"
+    description: "You always love Christmas time! And you appreciated Dylan's 'masterful scoop', LOL"
+    source: "xmas"
+
+  - title: "Thanksgiving"
+    description: "Ahhh Thanksgiving time. This is just a silly one of your grandkids to enjoy"
+    source: "thanksgiving"
+
+galleries:
+  from_spencer:
+    title: "From Your Son, Spencer"
+    description: "Thank you Marko for putting this together, we wanted to show a few pictures and videos that will be available on this site forever. I feel so very lucky to be a part of this family and to have you as my father. I truly feel like I had the best childhood ever and we’re all doing a great job ensuring the next generation of Kockerbecks get the same great experiences in life. Thank you for everything, we’re all so lucky. Happy Birthday to my amazing Dad."
+    pics:
+      - title: "With Da Babies"
+        description: "I just love watching you with my boys, theres no denying the bond you share with them and all of your grandchildren."
+        source: "from_spencer/baby2.jpg"
+      - title: "Cheers"
+        source: "from_spencer/beers.jpg"
+        description: "Your adventurous spirit has definitely rubbed off on us all, I credit so much of my desire for exploring to the way you raised us to be curious and excited."
+
+  from_mom:
+    title: "From Your Loving Wife"
+    description: "Look at all these memories that your loving wife has kept around! Very nice, Mom."
+
+  examples:
+    title: "An Example to Your Kids"
+    description: "You are an amazing example of being a DAD, a GRANDFATHER, and a PARENT. Thanks for being there. Your presence with us, advocacy for us, commitment to us, and directing us towards a great purpose has shaped each of us. Here are a few things you taught us:"
+    pics:
+      - title: "Remember the Past"
+        description: "The ability to remember what happened before is like going back in time. (Or something, something...whatever fits a picture of us with a Delorean! This is just cool). Oh you also taught us to love cars. The ability to remember what happened before is like going back in time. (Or something, something...whatever fits a picture of us with a Delorean! This is just cool). Oh you also taught us to love cars."
+        source: "examples/bttf.jpg"
+      - title: "Always be Adventuring!"
+        description: "Each of us has our own unique sense of adventure, but it's something we learned to love."
+        source: "examples/nasa.jpg"
+      - title: "Fancy AF"
+        description: "You always love to be fancy. You know it, we know it, and we love you for it. (Ok, we like being fancy too)"
+        source: "examples/fancy.jpg"
+      - title: "Have Fun"
+        description: "There is always an occasion to mess around and have fun!"
+        source: "examples/have_fun.jpg"
