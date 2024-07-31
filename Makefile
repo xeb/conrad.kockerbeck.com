@@ -18,4 +18,5 @@ clean: ## cleans up the cruft from macFUSE
 
 upload: ## Uploads the static assets
 	./upload.sh
+	git push origin main
 	ssh xeb@gal.xeb.ai "cd ~/projects/conrad.kockerbeck.com && git pull origin main"
