@@ -67,4 +67,4 @@ def serve_video(name):
 #     return send_from_directory("vids", filename)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8007, host="0.0.0.0")
+    app.run(debug=True, port=8007, host="0.0.0.0", extra_files=['data.yaml'])
